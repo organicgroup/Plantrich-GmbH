@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="de" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Plantrich GmbH | Nachhaltige Kaffee- und Bio-Zutatenbeschaffung</title>
+    <meta name="description" content="Plantrich GmbH verbindet europäische Käufer mit nachhaltigem Kaffee, Bio-Gewürzen und Kräutern durch transparente Beschaffung und digitale Rückverfolgbarkeit." />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon-180.png" />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet" />
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#123C2E',
+              coffee: '#6B3F24',
+              gold: '#C9A227',
+              cream: '#F7F3EA',
+              charcoal: '#232323'
+            },
+            boxShadow: {
+              soft: '0 20px 40px -15px rgba(18, 60, 46, 0.05)',
+              card: '0 25px 50px -12px rgba(0, 0, 0, 0.15)',
+              glass: '0 8px 32px 0 rgba(0, 0, 0, 0.1)'
+            },
+            fontFamily: {
+              serif: ['"Playfair Display"', 'serif'],
+              sans: ['Inter', 'sans-serif']
+            }
+          }
+        }
+      };
+    </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/lucide@latest/dist/lucide.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="bg-cream text-charcoal overflow-x-hidden">
+    
+    <header class="fixed inset-x-0 top-4 z-50 px-4 sm:px-6 lg:px-10" id="navbarWrapper">
+      <nav class="glass-panel mx-auto flex w-full max-w-[1200px] items-center justify-between gap-4 rounded-full px-4 py-3 shadow-glass sm:px-5 lg:px-6" id="navbar" aria-label="Primary navigation">
+        <a href="#hero" class="flex items-center gap-3 text-sm font-bold uppercase tracking-widest text-white whitespace-nowrap">
+          <span class="brand-logo-mark h-10 w-10">
+            <img src="assets/logo.png" alt="" class="brand-logo-image" />
+          </span>
+          <span class="brand-text hidden sm:inline">Plantrich GmbH</span>
+        </a>
+        <div class="hidden xl:flex flex-1 items-center justify-center gap-4 text-[10px] font-bold uppercase tracking-[0.14em] text-white/90 whitespace-nowrap">
+          <a href="#coffee" class="nav-link hover:text-gold" data-translate-key="navCoffee">Kaffee</a>
+          <a href="#spices" class="nav-link hover:text-gold" data-translate-key="navSpices">Gewürze & Kräuter</a>
+          <a href="#origins" class="nav-link hover:text-gold" data-translate-key="navOrigins">Ursprung</a>
+          <a href="#traceability" class="nav-link hover:text-gold" data-translate-key="navTraceability">EUDR & Rückverfolgbarkeit</a>
+          <a href="#erp" class="nav-link hover:text-gold" data-translate-key="navERP">ERP Integration</a>
+          <a href="#about" class="nav-link hover:text-gold" data-translate-key="navAbout">Über uns</a>
+        </div>
+        <div class="flex items-center gap-2 whitespace-nowrap">
+          <details class="language-dropdown relative">
+            <summary id="languageSummary" class="language-trigger list-none cursor-pointer rounded-full border border-white/20 bg-white/10 px-4 py-2 text-[10px] font-bold uppercase tracking-[0.24em] text-white/90">DE</summary>
+            <div class="absolute right-0 mt-3 min-w-[110px] rounded-2xl border border-white/10 bg-white/95 p-2 text-[11px] font-semibold uppercase tracking-[0.24em] text-charcoal shadow-xl">
+              <button type="button" data-lang="de" class="language-button w-full text-left block rounded-xl px-3 py-2 hover:bg-cream">DE</button>
+              <button type="button" data-lang="en" class="language-button w-full text-left block rounded-xl px-3 py-2 hover:bg-cream">EN</button>
+            </div>
+          </details>
+          <a href="#contact" class="hidden rounded-full bg-white px-5 py-2.5 text-xs font-bold uppercase tracking-widest text-primary shadow-lg transition-transform hover:scale-105 hover:bg-gold hover:text-charcoal xl:inline-flex" data-translate-key="navContactCTA">Kontakt</a>
+          <button id="mobileMenuButton" type="button" class="mobile-menu-trigger inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-white/10 text-white xl:hidden" aria-expanded="false" aria-controls="mobileMenu">
+            <span class="icon-fallback menu-icon-fallback" aria-hidden="true"><span></span><span></span><span></span></span>
+            <i data-lucide="menu" class="h-5 w-5" aria-hidden="true"></i>
+            <span class="sr-only" data-translate-key="navMenuOpen">Menü öffnen</span>
+          </button>
+        </div>
+      </nav>
+      <div id="mobileMenu" class="mx-auto mt-3 hidden w-full max-w-[1200px] xl:hidden">
+        <div class="rounded-[1.5rem] border border-white/20 bg-white/95 p-4 text-primary shadow-card backdrop-blur-xl">
+          <div class="mb-3 flex items-center justify-between border-b border-primary/10 pb-3">
+            <p class="text-xs font-bold uppercase tracking-[0.18em]" data-translate-key="navMenu">Menü</p>
+            <button id="mobileMenuClose" type="button" class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-primary/10 bg-primary/5 text-primary">
+              <span class="icon-fallback close-icon-fallback" aria-hidden="true"></span>
+              <i data-lucide="x" class="h-5 w-5" aria-hidden="true"></i>
+              <span class="sr-only" data-translate-key="navMenuClose">Menü schließen</span>
+            </button>
+          </div>
+          <div class="grid gap-2 text-sm font-bold uppercase tracking-[0.12em]">
+            <a href="#coffee" class="rounded-2xl px-4 py-3 hover:bg-primary/5" data-mobile-link data-translate-key="navCoffee">Kaffee</a>
+            <a href="#spices" class="rounded-2xl px-4 py-3 hover:bg-primary/5" data-mobile-link data-translate-key="navSpices">Gewürze & Kräuter</a>
+            <a href="#origins" class="rounded-2xl px-4 py-3 hover:bg-primary/5" data-mobile-link data-translate-key="navOrigins">Ursprung</a>
+            <a href="#traceability" class="rounded-2xl px-4 py-3 hover:bg-primary/5" data-mobile-link data-translate-key="navTraceability">EUDR & Rückverfolgbarkeit</a>
+            <a href="#erp" class="rounded-2xl px-4 py-3 hover:bg-primary/5" data-mobile-link data-translate-key="navERP">ERP Integration</a>
+            <a href="#about" class="rounded-2xl px-4 py-3 hover:bg-primary/5" data-mobile-link data-translate-key="navAbout">Über uns</a>
+            <a href="#contact" class="mt-2 rounded-2xl bg-gold px-4 py-3 text-center text-charcoal shadow-soft" data-mobile-link data-translate-key="navContactCTA">Kontakt</a>
+          </div>
+          <div class="mt-4 flex items-center justify-between border-t border-primary/10 pt-4">
+            <p class="text-xs font-bold uppercase tracking-[0.18em] text-primary/70" data-translate-key="languageLabel">Sprache</p>
+            <div class="flex gap-2 text-xs font-bold uppercase tracking-[0.16em]">
+              <button type="button" data-lang="de" class="language-button rounded-full border border-primary/10 px-4 py-2 hover:bg-primary/5">DE</button>
+              <button type="button" data-lang="en" class="language-button rounded-full border border-primary/10 px-4 py-2 hover:bg-primary/5">EN</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="relative overflow-hidden min-h-screen flex items-center" id="hero">
+      <div class="absolute inset-0 bg-gradient-to-b from-primary/80 via-primary/60 to-primary/90 z-10"></div>
+      <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=1920&q=80" alt="Coffee harvesting" class="absolute inset-0 h-full w-full object-cover scale-105" />
+      
+      <div class="relative z-20 mx-auto max-w-[1200px] px-6 py-24 sm:px-10 w-full">
+        <div class="gsap-hero-up mb-6 inline-block glass-panel px-5 py-2 rounded-full text-xs font-semibold uppercase tracking-[0.2em] text-gold" data-translate-key="heroBadge">
+          Premium-Sourcing · EUDR-konform
+        </div>
+        <div class="max-w-3xl space-y-6">
+          <h1 class="gsap-hero-up text-5xl font-bold leading-tight text-white sm:text-6xl lg:text-7xl text-hero drop-shadow-lg" data-translate-key="heroHeading" data-translate-html>
+            Kaffee zuerst. <br/><span class="text-gold">Herkunft mit Verantwortung.</span>
+          </h1>
+          <p class="gsap-hero-up max-w-xl text-lg leading-relaxed text-white/90 font-light" data-translate-key="heroIntro1">
+            Plantrich GmbH verbindet europäische Käufer mit verlässlichen Produzenten in Vietnam, Indien und Uganda – mit Fokus auf Kaffee, Bio-Gewürze, Kräuter, Rückverfolgbarkeit und nachhaltige Lieferketten.
+          </p>
+          <p class="gsap-hero-up max-w-xl text-lg leading-relaxed text-white/85 font-light" data-translate-key="heroIntro2">
+            Vom Ursprung bis zum europäischen Markt schaffen wir Transparenz, Qualität und Vertrauen.
+          </p>
+          <div class="gsap-hero-up flex flex-col gap-4 sm:flex-row sm:items-center pt-4">
+            <a href="#coffee" class="inline-flex items-center justify-center rounded-full bg-gold px-8 py-4 text-sm font-bold uppercase tracking-widest text-charcoal shadow-card transition hover:scale-105 hover:shadow-xl" data-translate-key="heroButtonCoffee">Kaffee entdecken</a>
+            <a href="#traceability" class="inline-flex items-center justify-center rounded-full border border-white/30 bg-white/10 px-8 py-4 text-sm font-bold uppercase tracking-widest text-white transition hover:bg-white/15" data-translate-key="heroButtonTrace">EUDR & Traceability ansehen</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 hidden flex-col items-center gap-3 text-white sm:flex opacity-70">
+        <div class="h-12 w-7 rounded-full border-2 border-white/40 p-1">
+          <span class="block h-2 w-2 rounded-full bg-gold scroll-indicator mx-auto"></span>
+        </div>
+      </div>
+    </div>
+
+    <main class="relative mx-auto max-w-[1400px] space-y-32 px-6 pb-24 pt-24 sm:px-10">
+      
+      <section id="coffee" class="gsap-section overflow-hidden rounded-[2.5rem] bg-white shadow-card">
+        <div class="grid lg:grid-cols-[1.1fr_0.9fr]">
+          <div class="p-10 sm:p-16 lg:p-20 flex flex-col justify-center">
+            <div class="mb-6 inline-flex rounded-full bg-primary/10 px-4 py-2 text-xs font-bold tracking-[0.2em] text-primary" data-translate-key="coffeeTag">Kaffee zuerst</div>
+            <h2 class="text-4xl font-bold leading-tight text-charcoal sm:text-5xl text-hero" data-translate-key="coffeeHeading">Kaffee ist unser Herzstück</h2>
+            <p class="mt-6 text-lg leading-relaxed text-charcoal/70 font-light" data-translate-key="coffeeIntro">Plantrich GmbH arbeitet mit ausgewählten Produzenten, Kooperativen und Farmergruppen in Vietnam, Indien und Uganda zusammen. Unser Fokus liegt auf hochwertigen Kaffees mit klarer Herkunft, professioneller Qualitätskontrolle und einer transparenten Verbindung zwischen Farm und Käufer.</p>
+            <div class="mt-12 space-y-6">
+              <div class="group glass-card p-6 rounded-3xl transition duration-300 hover:shadow-xl border border-black/5 hover:border-gold/30">
+                <h3 class="text-xl font-bold text-charcoal">Vietnam</h3>
+                <p class="mt-3 text-sm text-charcoal/70" data-translate-key="coffeeVietnamText">Robusta-Projekte mit Fokus auf Frauenbeteiligung, Farmtraining, Qualitätsverbesserung, Rückverfolgbarkeit und zukünftige Bio-Zertifizierung.</p>
+              </div>
+              <div class="group glass-card p-6 rounded-3xl transition duration-300 hover:shadow-xl border border-black/5 hover:border-gold/30">
+                <h3 class="text-xl font-bold text-charcoal">Indien</h3>
+                <p class="mt-3 text-sm text-charcoal/70" data-translate-key="coffeeIndiaText">Schattengewachsener Kaffee aus traditionellen Anbauregionen, verbunden mit Bio-Gewürzen, Kräutern und nachhaltiger Landwirtschaft.</p>
+              </div>
+              <div class="group glass-card p-6 rounded-3xl transition duration-300 hover:shadow-xl border border-black/5 hover:border-gold/30">
+                <h3 class="text-xl font-bold text-charcoal">Uganda</h3>
+                <p class="mt-3 text-sm text-charcoal/70" data-translate-key="coffeeUgandaText">Kaffeeprojekte mit Kleinbauern, Farmergruppen und nachhaltiger Entwicklungsarbeit in ländlichen Regionen.</p>
+              </div>
+            </div>
+            <p class="mt-12 border-l-4 border-gold/80 pl-6 text-lg italic leading-8 text-charcoal/80" data-translate-key="coffeeQuote">Vom Ursprung bis nach Europa – Kaffee mit Menschen, Belegen und Sinn.</p>
+          </div>
+          <div class="relative h-96 lg:h-auto img-zoom-container">
+            <img src="assets/green-beans.jpeg" alt="Green coffee beans" class="absolute inset-0 h-full w-full object-cover" />
+          </div>
+        </div>
+      </section>
+
+      <section id="spices" class="gsap-section rounded-[2.5rem] bg-white p-10 shadow-card">
+        <div class="inline-flex rounded-full bg-primary/10 px-4 py-2 text-xs font-bold tracking-[0.2em] text-primary" data-translate-key="spicesTag">Gewürze & Kräuter</div>
+        <h2 class="mt-6 text-4xl font-bold leading-tight text-charcoal sm:text-5xl text-hero" data-translate-key="spicesHeading">Bio-Gewürze und Kräuter mit Herkunft</h2>
+        <p class="mt-6 text-lg leading-relaxed text-charcoal/70 font-light" data-translate-key="spicesIntro">Neben Kaffee bietet Plantrich GmbH Zugang zu sorgfältig ausgewählten Gewürzen und Kräutern aus verantwortungsvollen Lieferketten.</p>
+        <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <div class="rounded-[2rem] border border-black/5 p-6">
+            <h3 class="text-lg font-semibold text-charcoal" data-translate-key="spicesCard1">Schwarzer Pfeffer</h3>
+          </div>
+          <div class="rounded-[2rem] border border-black/5 p-6">
+            <h3 class="text-lg font-semibold text-charcoal" data-translate-key="spicesCard2">Ingwer</h3>
+          </div>
+          <div class="rounded-[2rem] border border-black/5 p-6">
+            <h3 class="text-lg font-semibold text-charcoal" data-translate-key="spicesCard3">Kurkuma</h3>
+          </div>
+          <div class="rounded-[2rem] border border-black/5 p-6">
+            <h3 class="text-lg font-semibold text-charcoal" data-translate-key="spicesCard4">Kardamom</h3>
+          </div>
+          <div class="rounded-[2rem] border border-black/5 p-6">
+            <h3 class="text-lg font-semibold text-charcoal" data-translate-key="spicesCard5">Nelken</h3>
+          </div>
+          <div class="rounded-[2rem] border border-black/5 p-6">
+            <h3 class="text-lg font-semibold text-charcoal" data-translate-key="spicesCard6">Muskatnuss</h3>
+          </div>
+          <div class="rounded-[2rem] border border-black/5 p-6">
+            <h3 class="text-lg font-semibold text-charcoal" data-translate-key="spicesCard7">Kräuter</h3>
+          </div>
+          <div class="rounded-[2rem] border border-black/5 p-6">
+            <h3 class="text-lg font-semibold text-charcoal" data-translate-key="spicesCard8">Oleoresins</h3>
+          </div>
+        </div>
+        <p class="mt-10 text-sm leading-7 text-charcoal/70" data-translate-key="spicesStrength">Unsere Stärke liegt nicht nur im Handel, sondern auch in Qualitätsmanagement, Dokumentation, Logistikkoordination und Kundenbetreuung für EU-Käufer.</p>
+      </section>
+
+      <section id="origins" class="gsap-section rounded-[2.5rem] bg-white p-10 shadow-card">
+        <div class="inline-flex rounded-full bg-primary/10 px-4 py-2 text-xs font-bold tracking-[0.2em] text-primary" data-translate-key="originsTag">Ursprung</div>
+        <h2 class="mt-6 text-4xl font-bold leading-tight text-charcoal sm:text-5xl text-hero" data-translate-key="originsHeading">Frauen im Ursprung stärken</h2>
+        <p class="mt-6 text-lg leading-relaxed text-charcoal/70 font-light" data-translate-key="originsIntro1">Unsere Projekte legen besonderen Wert auf die Rolle von Frauen in Kaffee, Gewürzen und ländlicher Entwicklung. Frauen übernehmen wichtige Aufgaben in Ernte, Sortierung, Qualitätskontrolle, Farmdokumentation, Training und Koordination.</p>
+        <p class="mt-6 text-lg leading-relaxed text-charcoal/70 font-light" data-translate-key="originsIntro2">Plantrich unterstützt eine neue Generation von motivierten Frauen in den Ursprungsländern – mit Wissen, Verantwortung und internationaler Marktorientierung.</p>
+        <div class="mt-10 grid gap-6 sm:grid-cols-2">
+          <div class="rounded-[2rem] border border-black/5 p-6">
+            <h3 class="text-lg font-semibold text-charcoal">Vietnam</h3>
+            <p class="mt-3 text-sm text-charcoal/70" data-translate-key="originTextVietnam">Frauen auf Kaffeeplantagen und im Cupping-Training.</p>
+          </div>
+          <div class="rounded-[2rem] border border-black/5 p-6">
+            <h3 class="text-lg font-semibold text-charcoal">Indien</h3>
+            <p class="mt-3 text-sm text-charcoal/70" data-translate-key="originTextIndia">Frauen sortieren Gewürze und Kaffee für Premium-Ursprungsqualität.</p>
+          </div>
+          <div class="rounded-[2rem] border border-black/5 p-6">
+            <h3 class="text-lg font-semibold text-charcoal">Uganda</h3>
+            <p class="mt-3 text-sm text-charcoal/70" data-translate-key="originTextUganda">Bäuerinnen mit Kaffeekirschen und ländlichen Entwicklungsprojekten.</p>
+          </div>
+          <div class="rounded-[2rem] border border-black/5 p-6">
+            <h3 class="text-lg font-semibold text-charcoal" data-translate-key="originTitleEurope">Europa</h3>
+            <p class="mt-3 text-sm text-charcoal/70" data-translate-key="originTextEurope">Saubere Logistik, Laborqualität, Käufermeetings und Dokumentation.</p>
+          </div>
+        </div>
+      </section>
+
+      <div id="erp"></div>
+      <section id="traceability" class="gsap-section grid gap-12 lg:grid-cols-2 items-center">
+        <div class="space-y-8">
+          <div class="inline-flex rounded-full bg-gold/20 px-4 py-2 text-xs font-bold tracking-[0.2em] text-primary" data-translate-key="traceTag">EUDR, Rückverfolgbarkeit & ERP</div>
+          <h2 class="text-4xl font-bold text-charcoal sm:text-5xl text-hero" data-translate-key="traceHeading">Digitale Rückverfolgbarkeit für moderne EU-Lieferketten</h2>
+          <p class="text-lg leading-relaxed text-charcoal/70 font-light" data-translate-key="traceIntro">Plantrich GmbH entwickelt integrierte Daten- und Compliance-Workflows für europäische Käufer. Unsere Systeme unterstützen Produzenten und Farmergruppen bei digitaler Dokumentation, Zertifizierungsmanagement und EUDR-bezogener Transparenz.</p>
+          <div class="grid gap-6 sm:grid-cols-2">
+            <div class="rounded-3xl border border-primary/10 p-6">
+              <h3 class="text-lg font-semibold text-charcoal" data-translate-key="traceCard1Title">Produzenten-ERP-Integration</h3>
+              <p class="mt-3 text-sm leading-7 text-charcoal/70" data-translate-key="traceCard1Text">Verbindung von Farmerdaten, Einkauf, Lager, Qualität, Export und Dokumentation.</p>
+            </div>
+            <div class="rounded-3xl border border-coffee/10 p-6">
+              <h3 class="text-lg font-semibold text-charcoal" data-translate-key="traceCard2Title">EUDR-Bereitschaft</h3>
+              <p class="mt-3 text-sm leading-7 text-charcoal/70" data-translate-key="traceCard2Text">GPS-Daten, Farmprofile, Risikoanalyse, Lieferkettentransparenz und digitale Nachweise.</p>
+            </div>
+            <div class="rounded-3xl border border-gold/15 p-6 sm:col-span-2">
+              <h3 class="text-lg font-semibold text-charcoal" data-translate-key="traceCard3Title">Dokumentation vom Ursprung zum Käufer</h3>
+              <p class="mt-3 text-sm leading-7 text-charcoal/70" data-translate-key="traceCard3Text">Chargenrückverfolgung, Qualitätsberichte, Zertifikate, Einkaufsdaten und Exportdokumente.</p>
+            </div>
+          </div>
+          <div class="mt-6 rounded-[2rem] bg-primary/5 p-6 text-sm text-charcoal/75">
+            <strong class="font-semibold" data-translate-key="traceCountriesLabel">Länder verbunden:</strong> <span data-translate-key="traceCountries">Vietnam | Indien | Uganda | Europa</span>
+          </div>
+          <p class="mt-8 text-base font-semibold text-charcoal" data-translate-key="traceSummary">Rückverfolgbar. Konform. Vernetzt. Bereit für Europa.</p>
+        </div>
+        
+        <div class="relative rounded-[2.5rem] bg-primary p-8 shadow-2xl overflow-hidden h-[500px] flex items-center justify-center">
+          <div class="absolute inset-0 opacity-20 bg-[url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80')] bg-cover mix-blend-overlay"></div>
+          
+          <svg class="absolute inset-0 h-full w-full z-10" viewBox="0 0 100 100" preserveAspectRatio="none">
+             <path d="M 20 50 Q 50 20 80 80" fill="transparent" class="map-line" />
+          </svg>
+
+          <div class="relative z-20 flex flex-col gap-6 w-full max-w-sm">
+             <div class="glass-panel p-4 rounded-2xl flex justify-between items-center transform -translate-x-4">
+                <span class="text-white font-bold" data-translate-key="mapLabel1">1. Ursprungshof</span>
+                <span class="text-gold text-xs uppercase tracking-wider" data-translate-key="mapLabel1Tag">Vietnam</span>
+             </div>
+             <div class="glass-panel p-4 rounded-2xl flex justify-between items-center transform translate-x-4">
+                <span class="text-white font-bold" data-translate-key="mapLabel2">2. Verarbeitung</span>
+                <span class="text-gold text-xs uppercase tracking-wider" data-translate-key="mapLabel2Tag">Qualitätskontrolle</span>
+             </div>
+             <div class="glass-panel p-4 rounded-2xl flex justify-between items-center bg-white/20 border-gold/50 shadow-[0_0_20px_rgba(201,162,39,0.3)]">
+                <span class="text-white font-bold" data-translate-key="mapLabel3">3. EUDR Export</span>
+                <span class="text-gold text-xs uppercase tracking-wider" data-translate-key="mapLabel3Tag">Europa</span>
+             </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="gsap-section rounded-[2.5rem] bg-white p-10 sm:p-16 shadow-card">
+        <div class="inline-flex rounded-full bg-primary/10 px-4 py-2 text-xs font-bold tracking-[0.2em] text-primary" data-translate-key="aboutTag">Über Plantrich GmbH</div>
+        <h2 class="mt-6 text-4xl font-bold leading-tight text-charcoal sm:text-5xl text-hero" data-translate-key="aboutHeading">Europäische Präsenz. Starke Wurzeln im Ursprung.</h2>
+        <p class="mt-6 text-lg leading-relaxed text-charcoal/70 font-light" data-translate-key="aboutPara1">Plantrich GmbH mit Sitz in Hamburg wurde aufgebaut, um europäische Käufer professionell mit Agrar- und Lebensmittelprodukten aus nachhaltigen Lieferketten zu verbinden. Der Unternehmenszweck umfasst Import, Handel, Lagerung, Vertrieb und Vermarktung von Agrar- und Lebensmittelprodukten, insbesondere Bio-Gewürze, Kräuter, Kaffee und verwandte Produkte.</p>
+        <p class="mt-6 text-lg leading-relaxed text-charcoal/70 font-light" data-translate-key="aboutPara2">Das Unternehmen verbindet europäische Marktanforderungen mit Produzentenrealität in Vietnam, Indien und Uganda.</p>
+        <p class="mt-8 text-lg font-semibold text-charcoal" data-translate-key="aboutPara3">Unsere Arbeit basiert auf langfristigen Partnerschaften, transparenter Dokumentation, Qualitätsbewusstsein und menschlichem Vertrauen.</p>
+      </section>
+
+      <section id="buyer" class="gsap-section grid gap-12 lg:grid-cols-[0.95fr_1.05fr] items-start">
+        <div class="rounded-[2.5rem] bg-[#eff5f0] p-10 sm:p-16 shadow-card">
+          <div class="inline-flex rounded-full bg-primary/10 px-4 py-2 text-xs font-bold tracking-[0.2em] text-primary" data-translate-key="buyerTag">EU-Käuferangebot</div>
+          <h2 class="mt-6 text-4xl font-bold leading-tight text-charcoal sm:text-5xl text-hero" data-translate-key="buyerHeading">Für Röster, Händler und Bio-Importeure in Europa</h2>
+          <p class="mt-6 text-lg leading-relaxed text-charcoal/70 font-light" data-translate-key="buyerIntro">Plantrich GmbH bietet europäischen Käufern:</p>
+          <ul class="mt-8 space-y-4 text-sm leading-7 text-charcoal/75 list-disc list-inside">
+            <li data-translate-key="buyerList1">Zuverlässige Kaffeeversorgung</li>
+            <li data-translate-key="buyerList2">Bio-Gewürze und Kräuter</li>
+            <li data-translate-key="buyerList3">Rückverfolgbarkeit auf Produzentenebene</li>
+            <li data-translate-key="buyerList4">Datenworkflows für EUDR</li>
+            <li data-translate-key="buyerList5">Qualität und Logistikkoordination</li>
+            <li data-translate-key="buyerList6">Verbindung zu Bauern und Genossenschaften</li>
+            <li data-translate-key="buyerList7">Digitale Dokumentation und ERP-Integration</li>
+            <li data-translate-key="buyerList8">Ursprungsentwicklung mit Frauenfokus</li>
+          </ul>
+        </div>
+        <div class="rounded-[2.5rem] bg-white p-10 sm:p-16 shadow-card flex flex-col justify-between">
+          <div>
+            <h3 class="text-3xl font-semibold text-charcoal" data-translate-key="buyerSideHeading">Lassen Sie uns Ihre transparente Ursprungslieferkette aufbauen.</h3>
+            <p class="mt-6 text-base leading-8 text-charcoal/70" data-translate-key="buyerSideIntro">Strategische Lösungen für Käufe von Kaffee, Bio-Gewürzen und dokumentierter Herkunft, zugeschnitten auf den europäischen Markt.</p>
+          </div>
+          <a href="#contact" class="mt-10 inline-flex items-center justify-center rounded-full bg-gold px-8 py-4 text-sm font-bold uppercase tracking-widest text-charcoal shadow-card transition hover:-translate-y-1" data-translate-key="buyerButton">Kontakt aufnehmen</a>
+        </div>
+      </section>
+
+      <section id="contact" class="gsap-section rounded-[2.5rem] bg-primary text-white p-10 sm:p-16 shadow-card">
+        <div class="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] items-center">
+          <div>
+            <div class="inline-flex rounded-full bg-white/10 px-4 py-2 text-xs font-bold tracking-[0.2em] text-white" data-translate-key="contactTag">Kontakt</div>
+            <h2 class="mt-6 text-4xl font-bold leading-tight text-white sm:text-5xl" data-translate-key="contactHeading">Kontakt aufnehmen</h2>
+            <p class="mt-6 text-lg leading-relaxed text-white/80" data-translate-key="contactIntro">Sprechen Sie mit uns über Ihre Anforderungen in Kaffee, Gewürzen, Traceability und EU-Compliance.</p>
+            <div class="mt-8 space-y-3 text-sm text-white/75">
+              <div><strong>Plantrich GmbH</strong></div>
+              <div><span data-translate-key="contactEmailLabel">E-Mail:</span> <a href="mailto:info@plantrich.eu" class="hover:text-white">info@plantrich.eu</a></div>
+              <div>+49 30 123 4567</div>
+              <div>Hamburg, Deutschland</div>
+            </div>
+          </div>
+          <div class="rounded-[2rem] bg-white/10 p-8">
+            <p class="text-sm uppercase tracking-[0.2em] text-white/70" data-translate-key="directContact">Direkter Kontakt</p>
+            <a href="mailto:info@plantrich.eu" class="mt-8 inline-flex w-full items-center justify-center rounded-full bg-gold px-6 py-4 text-sm font-bold uppercase tracking-widest text-charcoal transition hover:bg-white hover:text-charcoal" data-translate-key="contactButton">Kontakt aufnehmen</a>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="bg-primary text-white rounded-t-[3rem] mt-20">
+      <div class="mx-auto max-w-[1400px] px-6 py-20 sm:px-10 grid gap-12 md:grid-cols-2 lg:grid-cols-4">
+        <div class="space-y-6">
+          <div class="flex items-center gap-3 text-xl font-bold font-serif text-white">
+            <span class="brand-logo-mark h-12 w-12">
+              <img src="assets/logo.png" alt="" class="brand-logo-image" />
+            </span>Plantrich
+          </div>
+          <p class="text-sm leading-relaxed text-white/60" data-translate-key="footerDesc">Verantwortliche Kaffeebeschaffung und biologische Zutaten für den europäischen Markt.</p>
+        </div>
+        <div>
+          <h3 class="font-bold mb-6 text-gold uppercase tracking-widest text-xs" data-translate-key="footerNavHeading">Navigation</h3>
+          <ul class="space-y-3 text-sm text-white/70">
+            <li><a href="#coffee" class="hover:text-white transition" data-translate-key="footerLink1">Kaffeebeschaffung</a></li>
+            <li><a href="#spices" class="hover:text-white transition" data-translate-key="footerLink2">Gewürze & Kräuter</a></li>
+            <li><a href="#traceability" class="hover:text-white transition" data-translate-key="footerLink3">EUDR-Konformität</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-bold mb-6 text-gold uppercase tracking-widest text-xs" data-translate-key="footerContactHeading">Kontakt</h3>
+          <ul class="space-y-3 text-sm text-white/70">
+            <li><a href="mailto:info@plantrich.eu" class="hover:text-white transition">info@plantrich.eu</a></li>
+            <li>+49 30 123 4567</li>
+            <li>Hamburg, Deutschland</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-bold mb-6 text-gold uppercase tracking-widest text-xs" data-translate-key="footerSocialHeading">Social Media</h3>
+          <ul class="space-y-3 text-sm text-white/70">
+            <li><a href="#" class="footer-social-link hover:text-white transition" aria-label="Plantrich LinkedIn"><span>in</span>LinkedIn</a></li>
+            <li><a href="#" class="footer-social-link hover:text-white transition" aria-label="Plantrich Instagram"><span>ig</span>Instagram</a></li>
+            <li><a href="#" class="footer-social-link hover:text-white transition" aria-label="Plantrich Facebook"><span>f</span>Facebook</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="mx-auto flex max-w-[1400px] flex-col gap-4 border-t border-white/10 px-6 py-8 text-sm text-white/65 sm:px-10 md:flex-row md:items-center md:justify-between">
+        <p><span data-translate-key="footerEmailLabel">E-Mail:</span> <a href="mailto:info@plantrich.eu" class="font-semibold text-white hover:text-gold">info@plantrich.eu</a></p>
+        <p data-translate-key="footerSocialNote">Folgen Sie Plantrich für Updates aus Ursprung, Kaffee und Bio-Zutaten.</p>
+      </div>
+    </footer>
+
+    <script src="languages/de.js"></script>
+    <script src="languages/en.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
