@@ -89,6 +89,8 @@ window.PlantrichTranslations.de = {
   contactTag: 'Kontakt',
   contactHeading: 'Kontakt aufnehmen',
   contactIntro: 'Sprechen Sie mit uns über Ihre Anforderungen in Kaffee, Gewürzen, Traceability und EU-Compliance.',
+  contactPerson: 'Kontakt: Herr Detlev Grimmelt, Geschäftsführer',
+  contactMobileLabel: 'Mobil:',
   contactEmailLabel: 'E-Mail:',
   contactLocation: 'Hamburg, Deutschland',
   directContact: 'Direkter Kontakt',

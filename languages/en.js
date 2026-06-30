@@ -89,6 +89,8 @@ window.PlantrichTranslations.en = {
   contactTag: 'Contact',
   contactHeading: 'Get in touch',
   contactIntro: 'Talk to us about your coffee, spices, traceability and EU compliance needs.',
+  contactPerson: 'Contact: Mr. Detlev Grimmelt, Managing Director',
+  contactMobileLabel: 'Mobile:',
   contactEmailLabel: 'Email:',
   contactLocation: 'Hamburg, Germany',
   directContact: 'Direct contact',
