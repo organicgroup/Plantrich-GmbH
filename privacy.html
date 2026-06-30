@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="de" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Datenschutzerklärung | Plantrich GmbH</title>
+    <meta name="description" content="Datenschutzerklärung der Plantrich GmbH mit Informationen zu Kontaktaufnahme, lokaler Speicherung, externen Diensten und Betroffenenrechten." />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon-180.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#123C2E',
+              coffee: '#6B3F24',
+              gold: '#C9A227',
+              cream: '#F7F3EA',
+              charcoal: '#232323'
+            },
+            boxShadow: {
+              soft: '0 20px 40px -15px rgba(18, 60, 46, 0.05)',
+              card: '0 25px 50px -12px rgba(0, 0, 0, 0.15)',
+              glass: '0 8px 32px 0 rgba(0, 0, 0, 0.1)'
+            },
+            fontFamily: {
+              serif: ['"Playfair Display"', 'serif'],
+              sans: ['Inter', 'sans-serif']
+            }
+          }
+        }
+      };
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/lucide@latest/dist/lucide.min.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="bg-cream text-charcoal overflow-x-hidden" data-page="privacy">
+
+    <header class="fixed inset-x-0 top-4 z-50 px-4 sm:px-6 lg:px-10" id="navbarWrapper">
+      <nav class="glass-panel mx-auto flex w-full max-w-[1200px] items-center justify-between gap-4 rounded-full px-4 py-3 shadow-glass sm:px-5 lg:px-6" id="navbar" aria-label="Primary navigation">
+        <a href="index.html#hero" class="flex items-center gap-3 text-sm font-bold uppercase tracking-widest text-white whitespace-nowrap">
+          <span class="brand-logo-mark h-10 w-10">
+            <img src="assets/logo.png" alt="" class="brand-logo-image" />
+          </span>
+          <span class="brand-text hidden sm:inline">Plantrich GmbH</span>
+        </a>
+        <div class="hidden xl:flex flex-1 items-center justify-center gap-4 text-[10px] font-bold uppercase tracking-[0.14em] text-white/90 whitespace-nowrap">
+          <a href="index.html#coffee" class="nav-link hover:text-gold" data-translate-key="navCoffee">Kaffee</a>
+          <a href="index.html#spices" class="nav-link hover:text-gold" data-translate-key="navSpices">Gewürze & Kräuter</a>
+          <a href="index.html#origins" class="nav-link hover:text-gold" data-translate-key="navOrigins">Ursprung</a>
+          <a href="index.html#traceability" class="nav-link hover:text-gold" data-translate-key="navTraceability">EUDR & Rückverfolgbarkeit</a>
+          <a href="index.html#about" class="nav-link hover:text-gold" data-translate-key="navAbout">Über uns</a>
+        </div>
+        <div class="flex items-center gap-2 whitespace-nowrap">
+          <details class="language-dropdown relative">
+            <summary id="languageSummary" class="language-trigger list-none cursor-pointer rounded-full border border-white/20 bg-white/10 px-4 py-2 text-[10px] font-bold uppercase tracking-[0.24em] text-white/90">DE</summary>
+            <div class="absolute right-0 mt-3 min-w-[110px] rounded-2xl border border-white/10 bg-white/95 p-2 text-[11px] font-semibold uppercase tracking-[0.24em] text-charcoal shadow-xl">
+              <button type="button" data-lang="de" class="language-button w-full text-left block rounded-xl px-3 py-2 hover:bg-cream">DE</button>
+              <button type="button" data-lang="en" class="language-button w-full text-left block rounded-xl px-3 py-2 hover:bg-cream">EN</button>
+            </div>
+          </details>
+          <a href="index.html#contact" class="hidden rounded-full bg-white px-5 py-2.5 text-xs font-bold uppercase tracking-widest text-primary shadow-lg transition-transform hover:scale-105 hover:bg-gold hover:text-charcoal xl:inline-flex" data-translate-key="navContactCTA">Kontakt</a>
+          <button id="mobileMenuButton" type="button" class="mobile-menu-trigger inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-white/10 text-white xl:hidden" aria-expanded="false" aria-controls="mobileMenu">
+            <span class="icon-fallback menu-icon-fallback" aria-hidden="true"><span></span><span></span><span></span></span>
+            <i data-lucide="menu" class="h-5 w-5" aria-hidden="true"></i>
+            <span class="sr-only" data-translate-key="navMenuOpen">Menü öffnen</span>
+          </button>
+        </div>
+      </nav>
+      <div id="mobileMenu" class="mx-auto mt-3 hidden w-full max-w-[1200px] xl:hidden">
+        <div class="rounded-[1.5rem] border border-white/20 bg-white/95 p-4 text-primary shadow-card backdrop-blur-xl">
+          <div class="mb-3 flex items-center justify-between border-b border-primary/10 pb-3">
+            <p class="text-xs font-bold uppercase tracking-[0.18em]" data-translate-key="navMenu">Menü</p>
+            <button id="mobileMenuClose" type="button" class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-primary/10 bg-primary/5 text-primary">
+              <span class="icon-fallback close-icon-fallback" aria-hidden="true"></span>
+              <i data-lucide="x" class="h-5 w-5" aria-hidden="true"></i>
+              <span class="sr-only" data-translate-key="navMenuClose">Menü schließen</span>
+            </button>
+          </div>
+          <div class="grid gap-2 text-sm font-bold uppercase tracking-[0.12em]">
+            <a href="index.html#coffee" class="rounded-2xl px-4 py-3 hover:bg-primary/5" data-mobile-link data-translate-key="navCoffee">Kaffee</a>
+            <a href="index.html#spices" class="rounded-2xl px-4 py-3 hover:bg-primary/5" data-mobile-link data-translate-key="navSpices">Gewürze & Kräuter</a>
+            <a href="index.html#origins" class="rounded-2xl px-4 py-3 hover:bg-primary/5" data-mobile-link data-translate-key="navOrigins">Ursprung</a>
+            <a href="index.html#traceability" class="rounded-2xl px-4 py-3 hover:bg-primary/5" data-mobile-link data-translate-key="navTraceability">EUDR & Rückverfolgbarkeit</a>
+            <a href="index.html#about" class="rounded-2xl px-4 py-3 hover:bg-primary/5" data-mobile-link data-translate-key="navAbout">Über uns</a>
+            <a href="index.html#contact" class="mt-2 rounded-2xl bg-gold px-4 py-3 text-center text-charcoal shadow-soft" data-mobile-link data-translate-key="navContactCTA">Kontakt</a>
+          </div>
+          <div class="mt-4 flex items-center justify-between border-t border-primary/10 pt-4">
+            <p class="text-xs font-bold uppercase tracking-[0.18em] text-primary/70" data-translate-key="languageLabel">Sprache</p>
+            <div class="flex gap-2 text-xs font-bold uppercase tracking-[0.16em]">
+              <button type="button" data-lang="de" class="language-button rounded-full border border-primary/10 px-4 py-2 hover:bg-primary/5">DE</button>
+              <button type="button" data-lang="en" class="language-button rounded-full border border-primary/10 px-4 py-2 hover:bg-primary/5">EN</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="relative overflow-hidden bg-primary px-6 pb-20 pt-36 text-white sm:px-10 lg:pb-24">
+        <div class="absolute inset-0 opacity-20 bg-[url('assets/green-beans.jpeg')] bg-cover bg-center"></div>
+        <div class="relative mx-auto max-w-[1000px]">
+          <a href="index.html" class="inline-flex rounded-full border border-white/20 bg-white/10 px-4 py-2 text-xs font-bold uppercase tracking-[0.16em] text-white/80 hover:text-gold" data-translate-key="privacyBackHome">Zur Startseite</a>
+          <div class="mt-10 inline-flex rounded-full bg-white/10 px-4 py-2 text-xs font-bold uppercase tracking-[0.2em] text-gold" data-translate-key="privacyBadge">Datenschutz</div>
+          <h1 class="mt-6 text-5xl font-bold leading-tight sm:text-6xl text-hero" data-translate-key="privacyHeading">Datenschutzerklärung</h1>
+          <p class="mt-6 max-w-3xl text-lg leading-8 text-white/80" data-translate-key="privacyIntro">Diese Datenschutzerklärung informiert darüber, welche personenbezogenen Daten beim Besuch dieser Website und bei der Kontaktaufnahme mit Plantrich GmbH verarbeitet werden.</p>
+          <p class="mt-6 text-sm font-semibold uppercase tracking-[0.16em] text-white/60" data-translate-key="privacyUpdated">Stand: 30. Juni 2026</p>
+        </div>
+      </section>
+
+      <section class="privacy-policy mx-auto max-w-[1000px] px-6 py-20 sm:px-10">
+        <div class="space-y-8">
+          <article class="rounded-[2rem] bg-white p-8 shadow-soft">
+            <h2 class="text-2xl font-bold text-primary" data-translate-key="privacyGeneralTitle">1. Allgemeine Informationen</h2>
+            <p class="mt-4 leading-8 text-charcoal/75" data-translate-key="privacyGeneralText">Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, wenn Sie diese Website besuchen. Personenbezogene Daten sind alle Daten, mit denen Sie persönlich identifiziert werden können.</p>
+          </article>
+
+          <article class="rounded-[2rem] bg-white p-8 shadow-soft">
+            <h2 class="text-2xl font-bold text-primary" data-translate-key="privacyCollectionTitle">2. Datenerfassung auf dieser Website</h2>
+            <p class="mt-4 leading-8 text-charcoal/75" data-translate-key="privacyCollectionText">Ein Teil der Daten wird dadurch erhoben, dass Sie uns diese mitteilen, zum Beispiel per E-Mail oder Telefon. Andere Daten können beim Besuch der Website automatisch durch technische Systeme erfasst werden, insbesondere Browser, Betriebssystem, Zeitpunkt des Seitenaufrufs und IP-Adresse. Diese Daten dienen der sicheren und fehlerfreien Bereitstellung der Website.</p>
+          </article>
+
+          <article class="rounded-[2rem] bg-white p-8 shadow-soft">
+            <h2 class="text-2xl font-bold text-primary" data-translate-key="privacyHostingTitle">3. Hosting</h2>
+            <p class="mt-4 leading-8 text-charcoal/75" data-translate-key="privacyHostingText">Diese Website kann bei einem externen Dienstleister gehostet werden. Personenbezogene Daten, die auf dieser Website erfasst werden, können auf den Servern des Hosters verarbeitet werden. Dies kann insbesondere IP-Adressen, Meta- und Kommunikationsdaten, Websitezugriffe sowie weitere technische Daten umfassen. Das Hosting erfolgt im Interesse einer sicheren, schnellen und effizienten Bereitstellung unseres Online-Angebots.</p>
+          </article>
+
+          <article class="rounded-[2rem] bg-white p-8 shadow-soft">
+            <h2 class="text-2xl font-bold text-primary" data-translate-key="privacyResponsibleTitle">4. Verantwortliche Stelle</h2>
+            <p class="mt-4 leading-8 text-charcoal/75" data-translate-key="privacyResponsibleText" data-translate-html>Verantwortlich für die Datenverarbeitung auf dieser Website ist Plantrich GmbH, Hamburg, Deutschland. Ansprechpartner: Herr Detlev Grimmelt, Geschäftsführer. E-Mail: <a href="mailto:info@plantrich.eu">info@plantrich.eu</a>. Mobil: <a href="tel:+491511251895">+49 151 1251895</a>.</p>
+          </article>
+
+          <article class="rounded-[2rem] bg-white p-8 shadow-soft">
+            <h2 class="text-2xl font-bold text-primary" data-translate-key="privacyLegalRetentionTitle">5. Rechtsgrundlagen und Speicherdauer</h2>
+            <p class="mt-4 leading-8 text-charcoal/75" data-translate-key="privacyLegalRetentionText">Soweit eine Einwilligung erforderlich ist, erfolgt die Verarbeitung auf Grundlage von Art. 6 Abs. 1 lit. a DSGVO. Für die Beantwortung von Anfragen und vorvertragliche Kommunikation gilt Art. 6 Abs. 1 lit. b DSGVO. Für den sicheren und funktionsfähigen Betrieb der Website stützen wir uns auf Art. 6 Abs. 1 lit. f DSGVO. Personenbezogene Daten bleiben nur so lange gespeichert, wie der jeweilige Zweck besteht oder gesetzliche Aufbewahrungspflichten greifen.</p>
+          </article>
+
+          <article class="rounded-[2rem] bg-white p-8 shadow-soft">
+            <h2 class="text-2xl font-bold text-primary" data-translate-key="privacyRightsTitle">6. Ihre Rechte</h2>
+            <p class="mt-4 leading-8 text-charcoal/75" data-translate-key="privacyRightsText">Sie haben jederzeit das Recht auf unentgeltliche Auskunft über Herkunft, Empfänger und Zweck Ihrer gespeicherten personenbezogenen Daten. Außerdem haben Sie Rechte auf Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit, Widerspruch sowie Widerruf erteilter Einwilligungen. Ihnen steht zudem ein Beschwerderecht bei einer zuständigen Datenschutzaufsichtsbehörde zu.</p>
+          </article>
+
+          <article class="rounded-[2rem] bg-white p-8 shadow-soft">
+            <h2 class="text-2xl font-bold text-primary" data-translate-key="privacyObjectionTitle">7. Widerspruch und Widerruf</h2>
+            <p class="mt-4 leading-8 text-charcoal/75" data-translate-key="privacyObjectionText">Wenn die Verarbeitung auf Art. 6 Abs. 1 lit. e oder f DSGVO beruht, können Sie aus Gründen, die sich aus Ihrer besonderen Situation ergeben, jederzeit Widerspruch einlegen. Eine erteilte Einwilligung können Sie jederzeit mit Wirkung für die Zukunft widerrufen. Die Rechtmäßigkeit der bis zum Widerruf erfolgten Verarbeitung bleibt unberührt.</p>
+          </article>
+
+          <article class="rounded-[2rem] bg-white p-8 shadow-soft">
+            <h2 class="text-2xl font-bold text-primary" data-translate-key="privacyCookiesTitle">8. Cookies und lokale Speicherung</h2>
+            <p class="mt-4 leading-8 text-charcoal/75" data-translate-key="privacyCookiesText">Diese Website verwendet derzeit keine Analyse- oder Marketing-Cookies. Im Browser werden notwendige lokale Speicherfunktionen genutzt, um Ihre Spracheinstellung und Cookie-Auswahl zu speichern. Sie können Ihren Browser so einstellen, dass er Cookies oder lokale Speicherung einschränkt; dadurch können einzelne Funktionen eingeschränkt sein.</p>
+          </article>
+
+          <article class="rounded-[2rem] bg-white p-8 shadow-soft">
+            <h2 class="text-2xl font-bold text-primary" data-translate-key="privacyEncryptionTitle">9. SSL- bzw. TLS-Verschlüsselung</h2>
+            <p class="mt-4 leading-8 text-charcoal/75" data-translate-key="privacyEncryptionText">Diese Website sollte aus Sicherheitsgründen und zum Schutz vertraulicher Inhalte über eine SSL- bzw. TLS-verschlüsselte Verbindung bereitgestellt werden. Eine verschlüsselte Verbindung erkennen Sie an „https://“ und dem Schloss-Symbol in der Browserzeile.</p>
+          </article>
+
+          <article class="rounded-[2rem] bg-white p-8 shadow-soft">
+            <h2 class="text-2xl font-bold text-primary" data-translate-key="privacySocialTitle">10. Social Media</h2>
+            <p class="mt-4 leading-8 text-charcoal/75" data-translate-key="privacySocialText">Auf dieser Website befinden sich derzeit einfache Links zu Social-Media-Profilen. Es sind keine Facebook-, Instagram- oder LinkedIn-Plugins eingebettet, die beim bloßen Seitenbesuch automatisch Daten an diese Plattformen übertragen.</p>
+          </article>
+
+          <article class="rounded-[2rem] bg-white p-8 shadow-soft">
+            <h2 class="text-2xl font-bold text-primary" data-translate-key="privacyToolsTitle">11. Plugins, Schriftarten und externe Ressourcen</h2>
+            <p class="mt-4 leading-8 text-charcoal/75" data-translate-key="privacyToolsText">Die Website lädt derzeit externe Ressourcen wie Google Fonts, Tailwind CDN, jsDelivr, cdnjs und Unsplash-Bilder. Beim Abruf dieser Ressourcen können technische Daten wie IP-Adresse, Browserinformationen und Zeitpunkt des Abrufs an die jeweiligen Anbieter übermittelt werden.</p>
+          </article>
+
+          <article class="rounded-[2rem] bg-white p-8 shadow-soft">
+            <h2 class="text-2xl font-bold text-primary" data-translate-key="privacyUpdatesTitle">12. Änderungen dieser Erklärung</h2>
+            <p class="mt-4 leading-8 text-charcoal/75" data-translate-key="privacyUpdatesText">Wir können diese Datenschutzerklärung anpassen, wenn sich die Website, eingesetzte Dienste oder rechtliche Anforderungen ändern.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-primary text-white rounded-t-[3rem] mt-20">
+      <div class="mx-auto max-w-[1400px] px-6 py-20 sm:px-10 grid gap-12 md:grid-cols-2 lg:grid-cols-4">
+        <div class="space-y-6">
+          <div class="flex items-center gap-3 text-xl font-bold font-serif text-white">
+            <span class="brand-logo-mark h-12 w-12">
+              <img src="assets/logo.png" alt="" class="brand-logo-image" />
+            </span>Plantrich
+          </div>
+          <p class="text-sm leading-relaxed text-white/60" data-translate-key="footerDesc">Verantwortliche Kaffeebeschaffung und biologische Zutaten für den europäischen Markt.</p>
+        </div>
+        <div>
+          <h3 class="font-bold mb-6 text-gold uppercase tracking-widest text-xs" data-translate-key="footerNavHeading">Navigation</h3>
+          <ul class="space-y-3 text-sm text-white/70">
+            <li><a href="index.html#coffee" class="hover:text-white transition" data-translate-key="footerLink1">Kaffeebeschaffung</a></li>
+            <li><a href="index.html#spices" class="hover:text-white transition" data-translate-key="footerLink2">Gewürze & Kräuter</a></li>
+            <li><a href="index.html#traceability" class="hover:text-white transition" data-translate-key="footerLink3">EUDR-Konformität</a></li>
+            <li><a href="privacy.html" class="hover:text-white transition" data-translate-key="footerPrivacyLink">Datenschutz</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-bold mb-6 text-gold uppercase tracking-widest text-xs" data-translate-key="footerContactHeading">Kontakt</h3>
+          <ul class="space-y-3 text-sm text-white/70">
+            <li><a href="mailto:info@plantrich.eu" class="hover:text-white transition">info@plantrich.eu</a></li>
+            <li><span data-translate-key="contactMobileLabel">Mobil:</span> <a href="tel:+491511251895" class="hover:text-white transition">+49 151 1251895</a></li>
+            <li data-translate-key="contactLocation">Hamburg, Deutschland</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-bold mb-6 text-gold uppercase tracking-widest text-xs" data-translate-key="footerSocialHeading">Social Media</h3>
+          <ul class="space-y-3 text-sm text-white/70">
+            <li><a href="#" class="footer-social-link hover:text-white transition" aria-label="Plantrich LinkedIn"><span>in</span>LinkedIn</a></li>
+            <li><a href="#" class="footer-social-link hover:text-white transition" aria-label="Plantrich Instagram"><span>ig</span>Instagram</a></li>
+            <li><a href="#" class="footer-social-link hover:text-white transition" aria-label="Plantrich Facebook"><span>f</span>Facebook</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="mx-auto flex max-w-[1400px] flex-col gap-4 border-t border-white/10 px-6 py-8 text-sm text-white/65 sm:px-10 md:flex-row md:items-center md:justify-between">
+        <p><span data-translate-key="footerEmailLabel">E-Mail:</span> <a href="mailto:info@plantrich.eu" class="font-semibold text-white hover:text-gold">info@plantrich.eu</a></p>
+        <p data-translate-key="footerSocialNote">Folgen Sie Plantrich für Updates aus Ursprung, Kaffee und Bio-Zutaten.</p>
+      </div>
+    </footer>
+
+    <script src="languages/de.js"></script>
+    <script src="languages/en.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

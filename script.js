@@ -5,6 +5,7 @@
   const mobileMenu = document.getElementById('mobileMenu');
   const openButton = document.getElementById('mobileMenuButton');
   const closeButton = document.getElementById('mobileMenuClose');
+  const pageName = document.body.dataset.page || 'home';
 
   function getTranslation(lang, key) {
     return translations[lang]?.[key] || translations[fallbackLanguage]?.[key] || '';
@@ -25,8 +26,8 @@
   }
 
   function updatePageMeta(lang) {
-    const title = getTranslation(lang, 'metaTitle');
-    const description = getTranslation(lang, 'metaDescription');
+    const title = getTranslation(lang, `${pageName}MetaTitle`) || getTranslation(lang, 'metaTitle');
+    const description = getTranslation(lang, `${pageName}MetaDescription`) || getTranslation(lang, 'metaDescription');
     const descriptionElement = document.querySelector('meta[name="description"]');
 
     if (title) document.title = title;
@@ -178,6 +179,47 @@
     window.addEventListener('scroll', updateProgress, { passive: true });
   }
 
+  function setupCookieConsent() {
+    let storedConsent = null;
+
+    try {
+      storedConsent = window.localStorage.getItem('plantrichCookieConsent');
+    } catch (error) {
+      storedConsent = null;
+    }
+
+    if (storedConsent === 'all' || storedConsent === 'necessary') return;
+
+    const banner = document.createElement('section');
+    banner.className = 'cookie-consent';
+    banner.setAttribute('aria-label', 'Cookie consent');
+    banner.innerHTML = `
+      <div class="cookie-consent__content">
+        <p class="cookie-consent__title" data-translate-key="cookieTitle">Datenschutzeinstellungen</p>
+        <p class="cookie-consent__text" data-translate-key="cookieText">Sie können alle Cookies erlauben oder nur notwendige Cookies zulassen. Derzeit verwendet diese Website notwendige Speicherfunktionen für Sprache und Cookie-Auswahl.</p>
+        <a href="privacy.html" class="cookie-consent__link" data-translate-key="cookiePrivacyLink">Datenschutzerklärung</a>
+      </div>
+      <div class="cookie-consent__actions">
+        <button type="button" class="cookie-consent__button cookie-consent__button--ghost" data-cookie-consent="necessary" data-translate-key="cookieNecessary">Nur notwendige Cookies erlauben</button>
+        <button type="button" class="cookie-consent__button cookie-consent__button--primary" data-cookie-consent="all" data-translate-key="cookieAllowAll">Alle Cookies erlauben</button>
+      </div>
+    `;
+
+    document.body.appendChild(banner);
+
+    banner.querySelectorAll('[data-cookie-consent]').forEach((button) => {
+      button.addEventListener('click', () => {
+        try {
+          window.localStorage.setItem('plantrichCookieConsent', button.dataset.cookieConsent);
+        } catch (error) {
+          // The banner can still close if localStorage is blocked.
+        }
+
+        banner.remove();
+      });
+    });
+  }
+
   function setupAnimations() {
     if (!window.gsap) return;
 
@@ -221,6 +263,7 @@
     setupStickyNav();
     setupSmoothScroll();
     setupScrollProgress();
+    setupCookieConsent();
     applyLanguage(getPreferredLanguage());
     setupAnimations();
   }
