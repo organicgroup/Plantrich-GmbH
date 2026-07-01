@@ -124,7 +124,7 @@ window.PlantrichTranslations.en = {
   privacyHostingTitle: '3. Hosting',
   privacyHostingText: 'This website may be hosted by an external service provider. Personal data collected on this website may be processed on the host provider’s servers. This may include IP addresses, meta and communication data, website access data and other technical data. Hosting is used in the interest of secure, fast and efficient provision of our online offering.',
   privacyResponsibleTitle: '4. Controller',
-  privacyResponsibleText: 'The controller responsible for data processing on this website is Plantrich GmbH, Hamburg, Germany. Contact person: Mr. Detlev Grimmelt, Managing Director. Email: <a href="mailto:info@plantrich.eu">info@plantrich.eu</a>. Mobile: <a href="tel:+491511251895">+49 151 1251895</a>.',
+  privacyResponsibleText: 'The controller responsible for data processing on this website is:<br />Plantrich GmbH<br />Hamburg, Germany<br />Represented by: Managing Director<br />Email: <a href="mailto:info@plantrich.eu">info@plantrich.eu</a>',
   privacyLegalRetentionTitle: '5. Legal bases and retention',
   privacyLegalRetentionText: 'Where consent is required, processing is based on Art. 6(1)(a) GDPR. For answering requests and pre-contractual communication, processing is based on Art. 6(1)(b) GDPR. For secure and functional website operation, we rely on Art. 6(1)(f) GDPR. Personal data is stored only for as long as the relevant purpose exists or statutory retention obligations apply.',
   privacyRightsTitle: '6. Your rights',

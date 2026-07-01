@@ -124,7 +124,7 @@ window.PlantrichTranslations.de = {
   privacyHostingTitle: '3. Hosting',
   privacyHostingText: 'Diese Website kann bei einem externen Dienstleister gehostet werden. Personenbezogene Daten, die auf dieser Website erfasst werden, können auf den Servern des Hosters verarbeitet werden. Dies kann insbesondere IP-Adressen, Meta- und Kommunikationsdaten, Websitezugriffe sowie weitere technische Daten umfassen. Das Hosting erfolgt im Interesse einer sicheren, schnellen und effizienten Bereitstellung unseres Online-Angebots.',
   privacyResponsibleTitle: '4. Verantwortliche Stelle',
-  privacyResponsibleText: 'Verantwortlich für die Datenverarbeitung auf dieser Website ist Plantrich GmbH, Hamburg, Deutschland. Ansprechpartner: Herr Detlev Grimmelt, Geschäftsführer. E-Mail: <a href="mailto:info@plantrich.eu">info@plantrich.eu</a>. Mobil: <a href="tel:+491511251895">+49 151 1251895</a>.',
+  privacyResponsibleText: 'Verantwortlich für die Datenverarbeitung auf dieser Website ist:<br />Plantrich GmbH<br />Hamburg, Deutschland<br />Vertreten durch: Geschäftsführer<br />E-Mail: <a href="mailto:info@plantrich.eu">info@plantrich.eu</a>',
   privacyLegalRetentionTitle: '5. Rechtsgrundlagen und Speicherdauer',
   privacyLegalRetentionText: 'Soweit eine Einwilligung erforderlich ist, erfolgt die Verarbeitung auf Grundlage von Art. 6 Abs. 1 lit. a DSGVO. Für die Beantwortung von Anfragen und vorvertragliche Kommunikation gilt Art. 6 Abs. 1 lit. b DSGVO. Für den sicheren und funktionsfähigen Betrieb der Website stützen wir uns auf Art. 6 Abs. 1 lit. f DSGVO. Personenbezogene Daten bleiben nur so lange gespeichert, wie der jeweilige Zweck besteht oder gesetzliche Aufbewahrungspflichten greifen.',
   privacyRightsTitle: '6. Ihre Rechte',
