@@ -1,11 +1,11 @@
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   background: #faf7f1;
   color: #232323;
 }
 
 .text-hero {
-  font-family: 'Playfair Display', serif;
+  font-family: Georgia, 'Times New Roman', serif;
 }
 
 .brand-logo-mark {
@@ -247,6 +247,14 @@ section,
 
 .icon-fallback {
   color: currentColor;
+}
+
+[data-lucide] {
+  display: none;
+}
+
+.icons-ready [data-lucide] {
+  display: block;
 }
 
 .icons-ready .icon-fallback {
