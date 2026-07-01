@@ -148,14 +148,16 @@ window.PlantrichTranslations.en = {
   imprintBadge: 'Imprint',
   imprintHeading: 'Imprint',
   imprintIntro: 'Legal information for Plantrich GmbH.',
-  imprintCompanyTitle: 'Information according to § 5 TMG',
-  imprintCompanyText: 'Plantrich GmbH<br />Am Südermoor 30<br />24888 Steinfeld<br />Germany',
+  imprintCompanyTitle: 'Information according to Section 5 DDG',
+  imprintCompanyText: 'Plantrich GmbH<br />Business address: Am Südermoor 30<br />24888 Steinfeld<br />Germany',
+  imprintRegisteredSeatTitle: 'Registered seat of the company',
+  imprintRegisteredSeatText: 'Hamburg',
   imprintCommercialRegisterTitle: 'Commercial Register',
-  imprintCommercialRegisterText: 'HRB 199813',
-  imprintRegisterCourtTitle: 'Register Court',
-  imprintRegisterCourtText: 'Amtsgericht Hamburg',
+  imprintCommercialRegisterText: 'Registered in the Commercial Register<br />Register Court: Local Court Hamburg<br />Registration Number: HRB 199813',
   imprintRepresentedTitle: 'Represented by',
   imprintRepresentedText: 'Detlev Jürgen Grimmelt, Managing Director / Geschäftsführer',
   imprintContactTitle: 'Contact',
-  imprintContactText: 'Email: <a href="mailto:info@plantrich.eu">info@plantrich.eu</a><br />Phone: <a href="tel:+491511251895">+49 151 1251895</a>'
+  imprintContactText: 'Email: <a href="mailto:info@plantrich.eu">info@plantrich.eu</a><br />Phone: <a href="tel:+491511251895">+49 151 1251895</a>',
+  imprintContentResponsibleTitle: 'Responsible for content according to Section 18(2) MStV',
+  imprintContentResponsibleText: 'Detlev Jürgen Grimmelt<br />Am Südermoor 30<br />24888 Steinfeld<br />Germany'
 };
