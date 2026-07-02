@@ -157,7 +157,7 @@ window.PlantrichTranslations.de = {
   imprintRepresentedTitle: 'Vertreten durch',
   imprintRepresentedText: 'Detlev Jürgen Grimmelt, Managing Director / Geschäftsführer',
   imprintContactTitle: 'Kontakt',
-  imprintContactText: 'E-Mail: <a href="mailto:info@plantrich.eu">info@plantrich.eu</a><br />Telefon: <a href="tel:+491511251895">+49 151 1251895</a>',
+  imprintContactText: 'E-Mail: <a href="mailto:info@plantrich.eu">info@plantrich.eu</a><br />Telefon: <a href="tel:+4915112518958">+49 151 12518958</a>',
   imprintContentResponsibleTitle: 'Verantwortlich für den Inhalt gemäß § 18 Abs. 2 MStV',
   imprintContentResponsibleText: 'Detlev Jürgen Grimmelt<br />Am Südermoor 30<br />24888 Steinfeld<br />Deutschland'
 };
