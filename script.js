@@ -220,6 +220,25 @@
     });
   }
 
+  function setupOriginCards() {
+    document.querySelectorAll('[data-origin-url]').forEach((card) => {
+      const openWebsite = () => {
+        window.open(card.dataset.originUrl, '_blank', 'noopener,noreferrer');
+      };
+
+      card.addEventListener('click', (event) => {
+        if (event.target.closest('a')) return;
+        openWebsite();
+      });
+
+      card.addEventListener('keydown', (event) => {
+        if (event.target !== card || (event.key !== 'Enter' && event.key !== ' ')) return;
+        event.preventDefault();
+        openWebsite();
+      });
+    });
+  }
+
   function setupAnimations() {
     if (!window.gsap) return;
 
@@ -264,6 +283,7 @@
     setupSmoothScroll();
     setupScrollProgress();
     setupCookieConsent();
+    setupOriginCards();
     applyLanguage(getPreferredLanguage());
     setupAnimations();
   }

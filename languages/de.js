@@ -27,6 +27,8 @@ window.PlantrichTranslations.de = {
   coffeeVietnamText: 'Robusta-Projekte mit Fokus auf Frauenbeteiligung, Farmtraining, Qualitätsverbesserung, Rückverfolgbarkeit und zukünftige Bio-Zertifizierung.',
   coffeeIndiaText: 'Schattengewachsener Kaffee aus traditionellen Anbauregionen, verbunden mit Bio-Gewürzen, Kräutern und nachhaltiger Landwirtschaft.',
   coffeeUgandaText: 'Kaffeeprojekte mit Kleinbauern, Farmergruppen und nachhaltiger Entwicklungsarbeit in ländlichen Regionen.',
+  originWebsiteLabel: 'Website:',
+  originEmailLabel: 'E-Mail:',
   coffeeQuote: 'Vom Ursprung bis nach Europa – Kaffee mit Menschen, Belegen und Sinn.',
   spicesTag: 'Gewürze & Kräuter',
   spicesHeading: 'Bio-Gewürze und Kräuter mit Herkunft',

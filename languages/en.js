@@ -27,6 +27,8 @@ window.PlantrichTranslations.en = {
   coffeeVietnamText: 'Robusta projects with a focus on women’s participation, farm training, quality improvement, traceability and future organic certification.',
   coffeeIndiaText: 'Shade-grown coffee from traditional growing regions paired with organic spices, herbs and sustainable farming.',
   coffeeUgandaText: 'Coffee projects with smallholders, farmer groups and sustainable rural development.',
+  originWebsiteLabel: 'Website:',
+  originEmailLabel: 'Email:',
   coffeeQuote: 'From origin to Europe – coffee with people, proof and purpose.',
   spicesTag: 'Spices & Herbs',
   spicesHeading: 'Organic spices and herbs with origin',
