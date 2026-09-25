@@ -152,7 +152,8 @@ window.PlantrichTranslations.de = {
   imprintHeading: 'Impressum',
   imprintIntro: 'Gesetzliche Angaben zur Plantrich GmbH.',
   imprintCompanyTitle: 'Angaben gemäß § 5 Digitale-Dienste-Gesetz (DDG, vormals § 5 TMG)',
-  imprintCompanyText: 'Plantrich GmbH<br />Am Südermoor 30<br />24888 Steinfeld<br />Deutschland<br />Vertreten durch den Geschäftsführer: Detlev Grimmelt<br />E-Mail: <a href="mailto:mail@plantrich.eu">mail@plantrich.eu</a><br />Internet: <a href="https://www.plantrich.eu">www.plantrich.eu</a><br />Registergericht: Amtsgericht Hamburg<br />Registernummer: HRB 199813<br />Umsatzsteuer-Identifikationsnummer: [noch ergänzen]',
+  imprintCompanyText: 'Plantrich GmbH<br />Am Südermoor 30<br />24888 Steinfeld<br />Deutschland<br />Vertreten durch den Geschäftsführer: Detlev Grimmelt<br />E-Mail: <a href="mailto:info@plantrich.eu">info@plantrich.eu</a><br />Internet: <a href="https://www.plantrich.eu">www.plantrich.eu</a><br />Registergericht: Amtsgericht Hamburg<br />Registernummer: HRB 199813',
+  // Umsatzsteuer-Identifikationsnummer hier ergänzen, sobald sie verfügbar ist.
   imprintContentResponsibleTitle: 'Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV',
   imprintContentResponsibleText: 'Detlev Grimmelt<br />Plantrich GmbH<br />Am Südermoor 30, 24888 Steinfeld',
   imprintDisputeTitle: 'Verbraucherstreitbeilegung',

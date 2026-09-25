@@ -152,7 +152,8 @@ window.PlantrichTranslations.en = {
   imprintHeading: 'Imprint',
   imprintIntro: 'Legal information for Plantrich GmbH.',
   imprintCompanyTitle: 'Information pursuant to Section 5 of the German Digital Services Act (DDG, formerly Section 5 TMG)',
-  imprintCompanyText: 'Plantrich GmbH<br />Am Südermoor 30<br />24888 Steinfeld<br />Germany<br />Represented by its Managing Director: Detlev Grimmelt<br />Email: <a href="mailto:mail@plantrich.eu">mail@plantrich.eu</a><br />Website: <a href="https://www.plantrich.eu">www.plantrich.eu</a><br />Register court: Hamburg Local Court<br />Registration number: HRB 199813<br />VAT identification number: [to be added]',
+  imprintCompanyText: 'Plantrich GmbH<br />Am Südermoor 30<br />24888 Steinfeld<br />Germany<br />Represented by its Managing Director: Detlev Grimmelt<br />Email: <a href="mailto:info@plantrich.eu">info@plantrich.eu</a><br />Website: <a href="https://www.plantrich.eu">www.plantrich.eu</a><br />Register court: Hamburg Local Court<br />Registration number: HRB 199813',
+  // Add the VAT identification number here once it is available.
   imprintContentResponsibleTitle: 'Responsible for content pursuant to Section 18(2) MStV',
   imprintContentResponsibleText: 'Detlev Grimmelt<br />Plantrich GmbH<br />Am Südermoor 30, 24888 Steinfeld',
   imprintDisputeTitle: 'Consumer Dispute Resolution',
